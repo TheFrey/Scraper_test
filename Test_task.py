@@ -11,7 +11,7 @@ def main():
                      user=input('Login: '),
                      password=input('Password: '),
                      database='test_task') as connection:
-            for i in range(1, 2):
+            for i in range(1, 5000000):
                 r = requests.get(link.format(num=i))
                 if r.status_code == 404:
                     break
